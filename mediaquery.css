@@ -1,0 +1,27 @@
+header{
+    flex-flow: column nowrap;
+}
+nav >a{
+  display: none;
+}
+
+nav>a#menu{
+  display:inline-block ;
+  background-image: url('https://icon-library.com/images/hamburger-menu-icon-png/hamburger-menu-icon-png-29.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  transition-duration: 0.5s;
+}
+
+nav>a#menu:hover{
+    filter: brightness(0.3);
+    transition-duration: 0.5s;
+}
+
+/*Cards*/
+div#cardcontainer{
+  flex-flow: column nowrap;
+  
+}
