@@ -1,0 +1,53 @@
+<header>
+    <div class="logo">
+        <img src="../assets/images/logo/logonyn.jpg" alt="Logo">
+        <a href="../index.html"></a>
+    </div>
+
+    <button class="menu-toggle">☰</button>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../paginas/servicos.html">Serviços</a></li>
+            <li><a href="../paginas/loja.html">Loja</a></li>
+            <li><a href="../paginas/pedido.html">Pedir</a></li>
+            <li><a href="../marketplace/index.html">Market</a></li>
+            <li><a href="../paginas/sobre.html">Sobre</a></li>
+            <li><a href="../paginas/contacto.html">Contacto</a></li>
+        </ul>
+        <a href="../paginas/pedido.html" class="cart-icon"></a>
+            <!-- Ícone do carrinho -->
+        <div class="cart-wrapper">
+            <a href="#" class="cart-icon" id="open-cart">
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+
+        <!-- Painel lateral do carrinho -->
+        <div class="cart-panel" id="cart-panel">
+            <div class="cart-header">
+                <h3>Seu Carrinho</h3>
+                <button id="close-cart">X</button>
+            </div>
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- produtos inseridos via JS -->
+                </tbody>
+            </table>
+            <h4>Total: <span id="total-geral">0</span> MT</h4>
+            <button id="send-whatsapp">Finalizar pelo WhatsApp</button>
+        </div>
+
+
+    </nav>
+</header>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre NYN Serviços</title>
+    <link rel="stylesheet" href="../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../assets/css/base/variables.css">
+    <link rel="stylesheet" href="../assets/css/base/typography.css">
+    <link rel="stylesheet" href="../assets/css/layout/header.css">
+    <link rel="stylesheet" href="../assets/css/layout/footer.css">
+    <link rel="stylesheet" href="../assets/css/pages/sobre.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="sobre">
+        <h2>Sobre a NYN Serviços</h2>
+        <p>A NYN Serviços oferece produtos e soluções para empresas e particulares. Nosso objetivo é facilitar seus pedidos com rapidez, eficiência e qualidade.</p>
+    </section>
+<!--S3çao de eqipe de programadores-->
+    <section class="dev-team">
+
+        <h2>Equipe de Desenvolvimento</h2>
+
+        <div class="dev-grid">
+
+        <div class="flip-card">
+
+        <div class="flip-card-inner">
+
+        <!-- FRENTE -->
+        <div class="flip-card-front">
+
+        <img src="../assets/images/icons/orton.jpeg" alt="Ortony">
+
+        <h3>Ortony Alfredo</h3>
+
+        <p>Front-End Developer</p>
+
+        <p class="bio">
+            Responsável pelo desenvolvimento do site da NYN Serviços,
+            utilizando HTML, CSS e JavaScript.
+        </p>
+
+        </div>
+
+
+        <!-- VERSO -->
+        <div class="flip-card-back">
+
+        <h3>Contacto</h3>
+
+        <p>Email: ortonyAlfredo2022@gmail.com</p>
+
+        <p>WhatsApp: +258 84 704 3363</p>
+
+        <p>Tecnologias:</p>
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+
+        </div>
+
+        </div>
+
+        </div>
+
+
+
+        <div class="flip-card">
+
+        <div class="flip-card-inner">
+
+        <div class="flip-card-front">
+
+        <img src="../assets/images/icons/miro.JPG" alt="Dev">
+
+        <h3>Valter Andre</h3>
+
+        <p>UI Designer</p>
+
+        <p class="bio">
+            Responsável pela estrutura visual do site, organização
+            do layout e melhoria da experiência do utilizador.
+        </p>
+
+        </div>
+
+        <div class="flip-card-back">
+
+        <h3>Contacto</h3>
+
+        <p>Email: dev@email.com</p>
+
+        <p>WhatsApp: +258 87 000 0000</p>
+
+        <p>Tecnologias:</p>
+
+        <span>Figma</span>
+        <span>UX</span>
+        <span>UI</span>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <div id="footer"></div>
+    
+    
+    <script>
+        fetch('../components/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/carinho.js"></script>
+</body>
+</html>

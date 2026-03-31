@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYN Loja</title>
+    <link rel="stylesheet" href="../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../assets/css/base/variables.css">
+    <link rel="stylesheet" href="../assets/css/base/typography.css">
+    <link rel="stylesheet" href="../assets/css/layout/grid.css">
+    <link rel="stylesheet" href="../assets/css/layout/header.css">
+    <link rel="stylesheet" href="../assets/css/layout/footer.css">
+    <link rel="stylesheet" href="../assets/css/components/buttons.css">
+    <link rel="stylesheet" href="../assets/css/components/cards.css">
+    <link rel="stylesheet" href="../assets/css/pages/loja.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="produtos-loja">
+        <h2>Todos os Produtos</h2>
+        <div class="cards-container">
+            <!-- Exemplos de produtos -->
+            <div class="card">
+                <img src="../assets/images/produtos/caixa de resma a4(potatrim).png" alt="Papel A4">
+                <h3>Papel A4</h3>
+                <p>450 MT</p>
+                <a href="pedido.html" class="btn-primary">Pedir</a>
+                <button class="add-to-cart" data-name="Papel A4" data-price="450">
+                    Adicionar ao Carrinho
+
+                </button>
+            </div>
+            <div class="card">
+                <img src="../assets/images/produtos/caixa de cneta bic.png" alt="Canetas">
+                <h3>Canetas</h3>
+                <p>750 MT</p>
+                <a href="pedido.html" class="btn-primary">Pedir</a>
+                <button class="add-to-cart" data-name="Canetas" data-price="750">Adicionar ao Carinho</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+            <div class="card">
+                <img src="../assets/images/produtos/Toners.png" alt="toners">
+                <h3>Toners</h3>
+                <p>3.500 MT</p>
+                <a href="pedido.html" class="btn-primary">Pedir</a>
+                <button class="add-to-cart" data-name="toners" data-price="3500">Adiconar ao carinho</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+
+    <script>
+        fetch('../components/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/carinho.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYN Pedidos</title>
+    <link rel="stylesheet" href="../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../assets/css/base/variables.css">
+    <link rel="stylesheet" href="../assets/css/base/typography.css">
+    <link rel="stylesheet" href="../assets/css/layout/grid.css">
+    <link rel="stylesheet" href="../assets/css/layout/header.css">
+    <link rel="stylesheet" href="../assets/css/layout/footer.css">
+    <link rel="stylesheet" href="../assets/css/components/buttons.css">
+    <link rel="stylesheet" href="../assets/css/components/forms.css">
+    <link rel="stylesheet" href="../assets/css/pages/pedido.css">
+</head>
+<body>
+   <div id="header"></div>
+
+<section class="form-pedido">
+    <h2>Faça seu Pedido</h2>
+
+    <form id="formPedido">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="contacto">Contato</label>
+        <input type="text" id="contacto" required>
+
+        <h3>Produtos/Serviços</h3>
+
+        <div id="lista-produtos">
+
+            <div class="produto-item">
+                <input type="text" class="produto" placeholder="Produto ou Serviço" required>
+                <input type="number" class="quantidade" placeholder="Quantidade" required>
+                <button type="button" class="remover">X</button>
+            </div>
+
+        </div>
+
+        <button type="button" id="addProduto">+ Adicionar Produto/Serviço</button>
+
+        <br><br>
+
+        <button type="submit" class="btn-primary">Enviar Pedido</button>
+
+    </form>
+</section>
+<!-- AREA DO CARRINHO -->
+
+    <section class="cart-section">
+
+        <h2>Seu Carrinho</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody id="cart-items"></tbody>
+
+        </table>
+
+        <h3>Total Geral: <span id="total-geral">0</span> MT</h3>
+
+        <button id="sendOrder">Enviar Pedido</button>
+
+    </section>
+
+<div id="footer"></div>
+    
+    <script>
+        fetch('../components/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+            (function(){
+                emailjs.init("-anDltKd9-cmAi91B");
+            })();
+    </script>
+    <script src="../assets/js/pedidos.js"></script>
+    <script src="../assets/js/carinho.js"></script>
+
+</body>
+</html>

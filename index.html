@@ -1,107 +1,123 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaquery.css" media="screen and (max-width: 550px)"/>
-    <link href="https://fonts.googleapis.com" rel="stylesheet" />
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYN Serviços  Pedir ficou fácil</title>
 
-  </head>
-  <body>
-      
-      <header>
-        <h1 id="companyName">MOZTECH</h1>
-        <nav id="navegaçao">
-          <a href="Menu" id="menu"></a>
-          <a href="Home">Home</a>
-          <a href="Paginas">Paginas</a>
-          <a href="Infomaçoes">Infomaçoes</a>
-          <a href="Ajuda">Ajuda</a>
-        </nav>
-      </header>
-      
-      <main>
-        <section id="bem">
-          <h1 class="centro">Welcome to <abbr title="Fornecimento de serviços">MOZTECH</abbr><br />LET US HELP YOU!</h1>
-        </section>
-        <!-- Criando Cards -->
-        <div id="cardcontainer">
-          <section id="card1" class="card">
-            <h2>Instalação de Softaware</h2>
-            <p class="escondido">Ofereceos Serviços de Instalaçãode Softaware, como antivirus, windows e outros...</p>
-          </section>
-          
-          <section id="card2" class="card">
-            <h2>Consultoria e Finanças</h2>
-            <p class="escondido">Fazemos Consultoria das finanças de cada empresa, para garantir transparencia.</p>
-          </section>
-          
-          <section id="card3" class="card">
-            <h2>Logistica e Transporte</h2>
-            <p class="escondido">Faça pedido de cada um dos produtos disponiveis na nossa empresa.chegar em sua casa.</p>
-          </section>
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/base/variables.css">
+    <link rel="stylesheet" href="assets/css/base/typography.css">
+
+    <!-- Layout -->
+    <link rel="stylesheet" href="assets/css/layout/grid.css">
+    <link rel="stylesheet" href="assets/css/layout/header.css">
+    <link rel="stylesheet" href="assets/css/layout/footer.css">
+
+    <!-- Components -->
+    <link rel="stylesheet" href="assets/css/components/buttons.css">
+    <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/components/forms.css">
+
+    <!-- Página específica -->
+    <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body>
+    <!-- Header (menu) -->
+    <div id="header"></div>
+
+    <!-- Banner principal -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>NYN – Pedir ficou fácil</h1>
+            <p>Soluções em produtos e serviços para empresas e particulares</p>
+            <div class="banner-buttons">
+                <a href="paginas/loja.html" class="btn-primary">Ver Produtos</a>
+                <a href="paginas/pedido.html" class="btn-secondary">Pedir Serviço</a>
+            </div>
         </div>
-        <!-- Cards -->
-        <button class="centro"><a href="LOginpage/index.html">GET IN</a></button>
-      </main>
-      
-      
-      <footer>
-        <section id="secao1">
-          <h1>MOZTECH</h1>
-          <article>
-            <div id="Parceiros">
-              <h2>Parceiros</h2>
-              <ul>
-                <li>Microsoft</li>
-                <li>TotalEnergie</li>
-                <li>HP (Hewlett-Packard)</li>
-                <li>Dell Technologies</li>
-                <li>Cisco Systems</li>
-                <li>Cegid Primavera</li>
-                <li>Lenovo</li>
-              </ul>
+        <div class="banner-image">
+            <img src="assets/images/banners/banner nynhome.png" alt="Banner NYN">
+        </div>
+    </section>
+
+    <!-- Seção de serviços -->
+    <section class="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="assets/images/icons/logistica.png" alt="Logística">
+                <h3>Logística</h3>
+                <p>Entrega rápida e eficiente de produtos e materiais.</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/icons/cotaçao.png" alt="Cotação">
+                <h3>Cotação</h3>
+                <p>Pesquisamos os melhores preços para você.</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/icons/fornecimento.png" alt="Fornecimento">
+                <h3>Fornecimento</h3>
+                <p>Produtos e materiais para empresas e particulares.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em destaque -->
+    <section class="produtos-destaque">
+        <h2>Produtos em Destaque</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="assets/images/produtos/caixa de resma a4(potatrim).png" alt="Papel A4">
+                <h3>Papel A4</h3>
+                <p>450 MT</p>
+                <a href="pages/pedido.html" class="btn-primary">Pedir</a>
             </div>
 
-          </article>
-          
-          <article>
-                        
-            <div id="Programadores">
-              <h2>Programadores</h2>
-              <ul>
-                <li>Orton Alfredo</li>
-                <li>Bijoisse Agire Eugenio</li>
-                <li>Marcio Teixerra</li>
-                <li>Valter Andre</li>
-                <li>Eusebio Rodrigues</li>
-                <li>Hilario Da FL</li>
-                <li>Joaquim Nazario</li>
-              </ul>
+            <div class="card">
+                <img src="assets/images/produtos/caixa de cneta bic.png" alt="Canetas">
+                <h3>Canetas</h3>
+                <p>750 MT</p>
+                <a href="pages/pedido.html" class="btn-primary">Pedir</a>
             </div>
-          </article>
-          
-          <article>
-                        
-            <div id="Contactos">
-              <h2>Contactos</h2>
-              <ul>
-                <li>Bijoisse Agire Eugenio</li>
-                <li>Marcio Teixerra</li>
-                <li>Valter Andre</li>
-                <li>Eusebio Rodrigues</li>
-                <li>Hilario Da FL</li>
-                <li>Joaquim Nazario</li>
-              </ul>
+
+            <div class="card">
+                <img src="assets/images/produtos/Toners.png" alt="toner">
+                <h3>Toners</h3>
+                <p>3.500 MT</p>
+                <a href="pages/pedido.html" class="btn-primary">Pedir</a>
             </div>
-          </article>
-        </section>
-      </footer>
-      
-      
-      
-      
-      <script src="script.js"></script>
-  </body>
+        </div>
+    </section>
+
+    <!-- Seção de como funciona -->
+    <section class="como-funciona">
+        <h2>Como Funciona</h2>
+        <ol>
+            <li>Escolha um produto ou serviço</li>
+            <li>Faça o pedido no site</li>
+            <li>Receba confirmação pelo WhatsApp ou Signal</li>
+            <li>Receba entrega ou serviço</li>
+        </ol>
+    </section>
+
+    <!-- Rodapé -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    
+    <script>
+        // Carregar header e footer via componentes
+        fetch('components/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('components/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/carinho.js"></script>
+</body>
 </html>
