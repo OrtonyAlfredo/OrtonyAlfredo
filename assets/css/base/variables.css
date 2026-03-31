@@ -1,0 +1,10 @@
+/* variables.css */
+:root {
+    --cor-principal: #0A3D62; /* azul escuro */
+    --cor-destaque: #f39c12; /* laranja */
+    --cor-fundo: #ffffff;
+    --cor-texto: #333333;
+
+    --font-principal: 'Poppins', sans-serif;
+    --font-titulo: 'Poppins', sans-serif;
+}

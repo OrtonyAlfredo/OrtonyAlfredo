@@ -1,0 +1,512 @@
+/* header.css atualizado */
+
+/* Header padrão */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+/* Logo */
+
+header .logo img {
+    max-height: 50px;
+}
+
+
+/*Nome da empresa*/
+header > div > a{
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+/* Menu desktop */
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Menu mobile toggle */
+.menu-toggle {
+    display: none; /* só mostra em telas pequenas */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+button.menu-toggle{
+    height: 25px;
+    width: 50px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* aparece em mobile */
+        width: 40px;
+        height: 20px;
+        transition: all 1s ease background-color 1s;
+    }
+    .menu-toggle:hover{
+        background-color: rgb(165, 164, 164);
+        transition-duration: 0.4s;
+    }
+
+    header nav ul {
+        display: none; /* escondido por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--cor-principal);
+        width: 200px; /* largura do menu mobile */
+        padding: 15px 0;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    header nav ul.active {
+        display: flex; /* mostra ao clicar no toggle */
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        text-align: right;
+        padding: 0 20px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+}
+
+
+
+.cart-section{
+
+padding:40px;
+background:#f5f5f5;
+
+}
+
+#cart-items{
+
+list-style:none;
+padding:0;
+
+}
+
+#cart-items li{
+
+background:white;
+margin:10px 0;
+padding:10px;
+display:flex;
+justify-content:space-between;
+
+}
+
+.cart-icon{
+
+cursor:pointer;
+font-size:18px;
+
+}
+
+#cart-count{
+
+background:red;
+color:white;
+padding:3px 8px;
+border-radius:50%;
+
+}
+
+
+/* Carrinho lateral */
+.cart-panel{
+    position:fixed;
+    top:0;
+    right:-400px; /* fora da tela inicialmente */
+    width:350px;
+    height:100%;
+    background:#fff;
+    box-shadow:-4px 0 12px rgba(0,0,0,0.2);
+    padding:20px;
+    z-index:999;
+    transition: right 0.3s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+.cart-panel.open{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.cart-header h3{
+    margin:0;
+}
+
+.cart-header button{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:4px 8px;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+#cart-items{
+    list-style:none;
+    padding:0;
+    flex:1;
+    overflow-y:auto;
+}
+
+#cart-items li{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+#cart-items li button{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:2px 6px;
+    cursor:pointer;
+    border-radius:4px;
+    font-size:12px;
+}
+
+#send-whatsapp{
+    background:#25d366;
+    color:#fff;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    border-radius:6px;
+    margin-top:10px;
+    font-size:16px;
+}
+
+
+
+/* ============================= */
+/* CARRINHO DE PEDIDOS */
+/* ============================= */
+
+
+.cart-section{
+    display: none;
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+    background:#ffffff;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* titulo */
+
+.cart-section h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+/* tabela */
+
+.cart-section table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* cabeçalho */
+
+.cart-section thead{
+    background:#0d6efd;
+    color:white;
+}
+
+.cart-section th{
+    padding:12px;
+    font-weight:600;
+    text-align:center;
+}
+
+/* linhas */
+
+.cart-section td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+/* linhas alternadas */
+
+.cart-section tbody tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+/* botões quantidade */
+
+.cart-section td button{
+    padding:4px 8px;
+    margin:0 4px;
+    border:none;
+    background:#0d6efd;
+    color:white;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+/* botão remover */
+
+.cart-section td button:last-child{
+    background:#dc3545;
+}
+
+/* hover */
+
+.cart-section td button:hover{
+    opacity:0.85;
+}
+
+/* total geral */
+
+#total-geral{
+    font-weight:bold;
+    color:#0d6efd;
+}
+
+/* área total */
+
+.cart-section h3{
+    margin-top:20px;
+    text-align:right;
+}
+
+/* botão enviar pedido */
+
+#sendOrder{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#28a745;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#sendOrder:hover{
+    background:#218838;
+}
+
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width:768px){
+
+.cart-section table,
+.cart-section thead,
+.cart-section tbody,
+.cart-section th,
+.cart-section td,
+.cart-section tr{
+    display:block;
+}
+
+.cart-section thead{
+    display:none;
+}
+
+.cart-section tr{
+    margin-bottom:15px;
+    background:white;
+    border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.cart-section td{
+    text-align:right;
+    padding-left:50%;
+    position:relative;
+}
+
+.cart-section td::before{
+    position:absolute;
+    left:15px;
+    width:45%;
+    text-align:left;
+    font-weight:bold;
+}
+
+.cart-section td:nth-of-type(1)::before{content:"Produto";}
+.cart-section td:nth-of-type(2)::before{content:"Preço";}
+.cart-section td:nth-of-type(3)::before{content:"Quantidade";}
+.cart-section td:nth-of-type(4)::before{content:"Total";}
+.cart-section td:nth-of-type(5)::before{content:"Ação";}
+
+}
+
+
+/* ========================= */
+/* Painel lateral do carrinho */
+/* ========================= */
+.cart-panel{
+    position:fixed;
+    top:0;
+    right:-400px; /* escondido inicialmente */
+    width:350px;
+    height:100%;
+    background:#f9f9f9; /* fundo claro, contraste melhor */
+    box-shadow:-4px 0 12px rgba(0,0,0,0.25);
+    padding:20px;
+    z-index:999;
+    transition: right 0.3s ease;
+    display:flex;
+    flex-direction:column;
+    font-family:Arial, sans-serif;
+    color:#333; /* cor do texto escura */
+}
+
+.cart-panel.open{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.cart-header h3{
+    margin:0;
+    font-size:20px;
+    color:#0d6efd;
+}
+
+.cart-header button{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:4px 8px;
+    cursor:pointer;
+    border-radius:4px;
+    font-size:16px;
+}
+
+/* tabela do carrinho */
+.cart-panel table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:10px;
+    font-size:14px;
+    color:#333; /* texto visível */
+}
+
+.cart-panel th{
+    background:#0d6efd;
+    color:#fff;
+    font-weight:600;
+    padding:8px;
+}
+
+.cart-panel td{
+    padding:8px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    color:#333; /* texto visível */
+}
+
+/* botões + e - e remover */
+.cart-panel td button{
+    background:#0d6efd;
+    color:#f1eded;
+    border:none;
+    border-radius:4px;
+    padding:2px 6px;
+    margin:0 2px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.cart-panel td button:last-child{
+    background:#dc3545; /* botão remover */
+}
+
+/* hover nos botões */
+.cart-panel td button:hover{
+    opacity:0.85;
+}
+
+/* botão finalizar WhatsApp */
+#send-whatsapp{
+    background:#25d366;
+    color:#fff;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    border-radius:6px;
+    font-size:16px;
+    margin-top:10px;
+    width:100%;
+}
+
+/* total geral */
+#total-geral{
+    font-weight:bold;
+    color:#0d6efd;
+}
+
+/* responsivo */
+@media (max-width:768px){
+    .cart-panel{
+        width:100%;
+        right:-100%; /* esconde totalmente fora da tela */
+    }
+    .cart-panel.open{
+        right:0; /* abre totalmente */
+    }
+}

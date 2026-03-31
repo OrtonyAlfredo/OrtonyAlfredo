@@ -1,0 +1,11 @@
+/* cards.css */
+.card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}

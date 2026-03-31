@@ -1,0 +1,86 @@
+/* Formulário de Pedido */
+.form-pedido {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-pedido h2 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--cor-principal);
+    margin-bottom: 30px;
+}
+
+.form-pedido form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-pedido form input,
+.form-pedido form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-pedido form button.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-pedido form button.btn-primary:hover {
+    background-color: var(--cor-destaque);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-pedido {
+        margin: 50px 20px;
+        padding: 30px;
+    }
+}
+
+/*Seçao de adicionar produto*/
+.produto-item{
+display:flex;
+gap:10px;
+margin-bottom:10px;
+}
+
+.produto-item input{
+flex:1;
+padding:8px;
+}
+
+.remover{
+background:red;
+color:white;
+border:none;
+padding:5px 10px;
+cursor:pointer;
+}
+
+#addProduto{
+margin-top:10px;
+background:#0a66c2;
+color:white;
+border:none;
+padding:8px 12px;
+cursor:pointer;
+}
+

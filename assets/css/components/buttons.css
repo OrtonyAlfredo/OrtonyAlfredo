@@ -1,0 +1,40 @@
+/* buttons.css */
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-secondary {
+    background-color: #555555;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Botão Adicionar ao Carrinho */
+.add-to-cart {
+    background: #0d6efd;       /* azul principal da NYN */
+    color: #fff;               /* texto branco */
+    border: none;              /* sem borda */
+    border-radius: 6px;        /* cantos arredondados */
+    padding: 8px 12px;         /* espaço interno */
+    font-size: 14px;           /* tamanho legível */
+    cursor: pointer;           /* mostra mãozinha */
+    transition: all 0.3s ease; /* animação suave */
+    display: inline-block;     /* manter alinhamento correto */
+    margin-top: 10px;
+}
+
+/* Hover / passar o mouse */
+.add-to-cart:hover {
+    background: #0b5ed7;       /* azul mais escuro */
+    transform: scale(1.05);    /* leve zoom */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* sombra leve */
+}
+
+/* Clique ativo */
+.add-to-cart:active {
+    transform: scale(0.98);    /* efeito de clique */
+}
